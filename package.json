@@ -1,0 +1,32 @@
+{
+  "name": "demo-ci",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web \"node --watch server/index.js\" \"vite\"",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^10.0.7",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "supertest": "^7.3.2",
+    "vite": "^8.4.0",
+    "vitest": "^5.1.2"
+  }
+}
